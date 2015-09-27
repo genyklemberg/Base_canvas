@@ -1,0 +1,20 @@
+@import "includes/settings.scss";
+
+body {
+  color: green;
+  background: linear-gradient(45deg, grey, lightgrey);
+}
+
+a {
+  text-decoration: none;
+}
+
+.content-navigation {
+  border-color: $blue;
+  color:
+    darken($blue, 9%);
+}
+
+.border {
+  padding: $marg/2;
+}
