@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/app/bower_components/jquery/src/intro.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/bower_components/jquery/src/outro.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/bower_components/jquery/test/data/json_obj.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/node_modules/gulp-notify/node_modules/node-notifier/node_modules/cli-usage/node_modules/marked-terminal/node_modules/cli-table/node_modules/colors/examples/normal-usage.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/node_modules/gulp-sass/node_modules/node-sass/lib/index.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/node_modules/gulp-sass/node_modules/node-sass/node_modules/sass-graph/node_modules/lodash/array/findIndex.js" charset="UTF-8" />

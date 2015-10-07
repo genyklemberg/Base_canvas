@@ -1,20 +1,195 @@
 @import "includes/settings.scss";
 
 body {
-  color: green;
-  background: linear-gradient(45deg, grey, lightgrey);
+  background-image: url(../img/water_wood.jpg);
+  background-size: cover;
+}
+.weather_table {
+  line-height: 160%;
+  font-size: 16px;
+  margin:0;
+  padding-top: 10px;
+  position: relative;
+}
+.weather_block {
+  width: 100%;
+  color: #fff;
+  float: left;
+  list-style-type: none;
+  transition: all 0.25s;
+  position: relative;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  border-bottom: 1px solid transparent;
+}
+.weather_table h3 {
+  text-transform: uppercase;
+  padding: 5px 0;
+  background: #333;
+  margin: -10px 0 1px 0;
+}
+.pictures {
+  display: table;
+  background: #444;
+  width: 100%;
+  height: 70px;
+}
+.date {
+  font-size: 24px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  display: table-cell;
+}
+.date img{
+  height: 101px;
+  width: 99px;
+}
+.temperature {
+  font-weight: bold;
+  display: block;
+}
+.date_number{
+  font-size: 18px;
+}
+.features {
+  background: #DEF0F4;
+  color: #000;
+}
+.features li {
+  padding: 8px 15px;
+  border-bottom: 1px solid #ccc;
+  font-size: 15px;
+  list-style-type: none;
 }
 
-a {
-  text-decoration: none;
+.weather_block:hover {
+  box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.5);
+  transform: scale(1.04) translateY(-5px);
+  z-index: 1;
+  border-bottom: 0 none;
+}
+.weather_block:hover .pictures {
+  background:linear-gradient(#DB7224, #F9B84A);
+  box-shadow: inset 0 0 45px 1px #DB7224;
+}
+.weather_block:hover h3 {
+  background: #222;
+}
+.weather_block:hover .action_button {
+  background: linear-gradient(#F9B84A, #DB7224);
 }
 
-.content-navigation {
-  border-color: $blue;
-  color:
-    darken($blue, 9%);
+
+#weather{
+  width: 100%;
+  position: absolute;
+  top: 30%;
+
 }
 
-.border {
-  padding: $marg/2;
+// Blockquote
+
+blockquote {
+  position: relative;
 }
+blockquote:before,
+blockquote:after {
+  content: '';
+  display: block;
+  background: linear-gradient(to right, #ffffff 25%, #e9e9e9 25%, #e9e9e9 75%, #ffffff 75%);
+  height: 2px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  border-top: 2px solid #d9d9d9;
+  border-bottom: 2px solid #d9d9d9;
+}
+
+blockquote:before {
+  top: -2px;
+}
+
+blockquote:after {
+  bottom: -2px;
+}
+
+/* Navigation button styles */
+#picture-holder {
+  text-align: center;
+}
+#picture-holder:hover .btn{
+  display:block;
+}
+#image-slider{
+  position:relative;
+  margin:0 auto;
+  overflow:hidden;
+  width:50%;
+}
+
+.ps_prev, .ps_next{
+  width:40px;
+  height:40px;
+  position:absolute;
+  z-index:100;
+  top:300px;
+  line-height:40px;
+  text-align:center;
+
+  cursor: pointer;
+}
+
+.btn{
+  top: 20%;
+}
+.btn:hover{
+  background:rgba(255, 255, 255, 1);
+}
+.ps_prev{
+  background:rgba(255, 255, 255, 0.25);
+  padding:15px 10px 4px 12px;
+  opacity: 0.8;
+  margin-left: 50px;
+}
+.ps_next{
+  background:rgba(255, 255, 255, 0.25);
+  padding:15px 10px 4px 12px;
+  opacity: 0.8;
+  margin-left: 74%;
+}
+
+.ps_next img {
+  width:20px;
+}
+
+.ps_prev img {
+  width:20px;
+}
+
+@media only screen and (min-width : 480px) and (max-width : 768px) {
+  .weather_block {width: 50%;}
+  .weather_block:nth-child(odd) {border-right: 1px solid transparent;}
+  .weather_block:nth-child(3) {clear: both;}
+  .ps_next {margin-left: 116%;}
+  .weather_block:nth-child(odd):hover {border: 0 none;}
+}
+@media only screen and (min-width : 768px) {
+  .weather_block {width: 25%;}
+
+  .weather_block {border-right: 1px solid transparent; border-bottom: 0 none;}
+  .weather_block:last-child {border-right: 0 none;}
+
+  .weather_block:hover {border: 0 none;}
+}
+@media only screen and (min-width : 768px) and (max-width: 900px) {
+  .ps_next {margin-left: 85%;}
+}
+@media only screen and (min-width : 900px){
+  .ps_next {margin-left: 725px;}
+}
+@media only screen and (min-width : 900px) and (max-width: 1200px) {
+  #weather {width: 700px;}
+  .ps_next {margin-left: 600px;}
+}
+
+

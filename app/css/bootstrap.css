@@ -16,22 +16,18 @@ body {
   margin: 0;
 }
 
-nav {
-  display: block;
+img {
+  border: 0;
 }
 
-a {
-  background-color: transparent;
+select {
+  margin: 0;
+  font: inherit;
+  color: inherit;
 }
 
-a:active,
-a:hover {
-  outline: 0;
-}
-
-h1 {
-  margin: .67em 0;
-  font-size: 2em;
+select {
+  text-transform: none;
 }
 
 button::-moz-focus-inner,
@@ -53,13 +49,22 @@ input::-moz-focus-inner {
     box-shadow: none !important;
   }
 
-  a,
-  a:visited {
-    text-decoration: underline;
+  img {
+    page-break-inside: avoid;
   }
 
-  a[href]:after {
-    content: " (" attr(href) ")";
+  img {
+    max-width: 100% !important;
+  }
+
+  p,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h3 {
+    page-break-after: avoid;
   }
 }
 
@@ -95,42 +100,43 @@ body {
   background-color: #fff;
 }
 
-a {
-  color: #337ab7;
-  text-decoration: none;
+select {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
 }
 
-a:hover,
-a:focus {
-  color: #23527c;
-  text-decoration: underline;
+img {
+  vertical-align: middle;
 }
 
-a:focus {
-  outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-}
-
-h1 {
+h3 {
   font-family: inherit;
   font-weight: 500;
   line-height: 1.1;
   color: inherit;
 }
 
-h1 {
+h3 {
   margin-top: 20px;
   margin-bottom: 10px;
 }
 
-h1 {
-  font-size: 36px;
+h3 {
+  font-size: 24px;
+}
+
+p {
+  margin: 0 0 10px;
 }
 
 ul {
   margin-top: 0;
   margin-bottom: 10px;
+}
+
+ul ul {
+  margin-bottom: 0;
 }
 
 .form-control::-moz-placeholder {
@@ -140,6 +146,48 @@ ul {
 
 .form-control:-ms-input-placeholder {
   color: #999;
+}
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.btn:focus,
+.btn:active:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.btn:hover,
+.btn:focus {
+  color: #333;
+  text-decoration: none;
+}
+
+.btn:active {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
 }
 
 @-ms-viewport {

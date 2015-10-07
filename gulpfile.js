@@ -13,7 +13,36 @@ var gulp = require('gulp'),
     clean = require('gulp-clean'),
     sftp = require('gulp-sftp'),
     git = require('gulp-git'),
+    sourcemaps = require('gulp-sourcemaps'),
+    babel = require('gulp-babel'),
+    concat = require('gulp-concat'),
+    imagemin = require('gulp-imagemin'),
+    pngquant = require('imagemin-pngquant'),
+    browserify = require('browserify'),
+    ngAnnotate = require('gulp-ng-annotate'),
+    jshint = require('gulp-jshint'),
+    jshintStylish = require('jshint-stylish'),
+    source = require('vinyl-source-stream'),
+    buffer = require('vinyl-buffer'),
+    gutil = require('gulp-util'),
+    partialify = require('partialify'),
     prefix = require('gulp-autoprefixer');
+
+var external = [
+    'angular',
+    'angular-ui-router',
+    'angular-bootstrap',
+    'angular-translate',
+    'angular-cache',
+    'angular-base64',
+    'uuid4'
+];
+
+// Default
+gulp.task('default', ['connect', 'bower', 'html', 'clearCss', 'css', 'watch']);
+
+// Deploy final version on server
+gulp.task('deploy', ['images', 'build']);
 
 // SFTP
 gulp.task('sftp', function () {
@@ -25,6 +54,7 @@ gulp.task('sftp', function () {
             remotePath: "github.com/genyklemberg/Base_canvas.git"
         }));
 });
+
 
 // Clean folder dist
 gulp.task('clean', function () {
@@ -60,6 +90,17 @@ gulp.task('css', function () {
         .pipe(connect.reload());
 });
 
+// Compress images
+gulp.task('images', function () {
+    return gulp.src('app/images/*')
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            use: [pngquant()]
+        }))
+            .pipe(gulp.dest('dist/images'));
+});
+
 // Build
 gulp.task('build', ['clean'], function () {
     var assets = useref.assets();
@@ -81,8 +122,8 @@ gulp.task('html', function () {
 
 // Watch
 gulp.task("watch", function() {
-    gulp.watch('css/*.css', ["css"])
-        gulp.watch('app/index.html', ["html"])
+    gulp.watch('scss/style.scss', ["css"]);
+        gulp.watch('app/index.html', ["html"]);
             gulp.watch('bower.json', ['bower']);
 
 });
@@ -96,8 +137,4 @@ gulp.task('clearCss', function () {
         .pipe(gulp.dest('app/css'));
 });
 
-// Default
-gulp.task('default', ['connect', 'bower', 'html', 'clearCss', 'css', 'watch']);
 
-// Deploy final version on server
-gulp.task('deploy', ['build', 'sftp']);

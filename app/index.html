@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,44 +12,163 @@
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
     <link rel="stylesheet" href="css/bundle.min.css" type="text/css" />
     <!-- endbuild -->
-    <title></title>
+    <title>Weather website</title>
 </head>
 <body>
-    <nav>
-        <div>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-            sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-            magna aliquam erat volutpat. Ut wisi enim ad minim veniam,</div>
-        <div>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-            sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-            magna aliquam erat volutpat. Ut wisi enim ad minim veniam,</div>
-        <div>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-            sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-            magna aliquam erat volutpat. Ut wisi enim ad minim veniam,</div>
-    </nav>
-    <h1>Almost done, but we need to work</h1>
-    <ul>
-        <li><a href="">Lorem ipsum earum necessitatibus doloribus tempore fuga veritatis consequuntur.</a></li>
-        <li><a href="">Fuga, tate quos illo pariatur praesentium reprehenderit deleniti porro vero?</a></li>
-        <li><a href="">Saepe, quos reprehenderit cumque sunt nulla deserunt minima eius quisquam assumenda veniam quam laudantium?</a></li>
-        <li><a href="">Id,  autem tempore consequuntur animi voluptas ab reiciendis cum itaque molestiae aliquam! Debitis, delectus.</a></li>
-        <li><a href="">Nisi,  neque magni eaque magnam veritatis. Officiis aliquam quis voluptates voluptatem doloribus molestiae cumque deleniti.</a></li>
+<div id="city">
+    <p>Weather in <span id="city_name"> </span></p>
+    <select id="city_list">
+        <option value="702550">Lviv</option>
+        <option value="696050">Kyiv</option>
+        <option value="706483">Kharkiv</option>
+        <option value="707471">Ivano-Frankivsk</option>
+        <option value="691650">Ternopil</option>
+        <option value="689558">Vinnytsya</option>
+        <option value="702569">Lutsk</option>
+        <option value="710735">Chernihiv</option>
+        <option value="698740">Odessa</option>
+    </select>
+</div>
+<div id="weather">
+    <ul class="weather_table">
+        <li class="weather_block">
+            <h3 id="day_1"></h3>
+            <div class="pictures">
+                <div class="date">
+                    <span class="temperature" id="day_1_temp"></span>
+                    <span class="date_number" id="day_1_data"></span>
+                    <img id="day_1_img" src="" alt="sun">
+                </div>
+            </div>
+            <ul class="features">
+                <li id="day_1_descr"></li>
+                <li id="day_1_morning"></li>
+                <li id="day_1_night"></li>
+                <li id="day_1_humidity"></li>
+            </ul>
+
+        </li>
+
+        <li class="weather_block">
+            <h3 id="day_2"></h3>
+            <div class="pictures">
+                <div class="date">
+                    <span class="temperature" id="day_2_temp"></span>
+                    <span class="date_number" id="day_2_data"></span>
+                    <img  id="day_2_img" src="" alt="sun">
+                </div>
+            </div>
+            <ul class="features">
+                <li id="day_2_descr"></li>
+                <li id="day_2_morning"></li>
+                <li id="day_2_night"></li>
+                <li id="day_2_humidity"></li>
+            </ul>
+
+        </li>
+
+        <li class="weather_block">
+            <h3 id="day_3"></h3>
+            <div class="pictures">
+                <div class="date">
+                    <span class="temperature" id="day_3_temp"></span>
+                    <span class="date_number" id="day_3_data"></span>
+                    <img id="day_3_img" src="" alt="cloud">
+                </div>
+            </div>
+            <ul class="features">
+                <li id="day_3_descr"></li>
+                <li id="day_3_morning"></li>
+                <li id="day_3_night"></li>
+                <li id="day_3_humidity"></li>
+            </ul>
+        </li>
+
+        <li class="weather_block">
+            <h3 id="day_4"></h3>
+            <div class="pictures">
+                <div class="date">
+                    <span class="temperature" id="day_4_temp"></span>
+                    <span class="date_number" id="day_4_data"></span>
+                    <img id="day_4_img" src="" alt="cloud">
+                </div>
+            </div>
+            <ul class="features">
+                <li id="day_4_descr"></li>
+                <li id="day_4_morning"></li>
+                <li id="day_4_night"></li>
+                <li id="day_4_humidity"></li>
+            </ul>
+        </li>
+
+        <li class="weather_block">
+            <h3 id="day_5"></h3>
+            <div class="pictures">
+                <div class="date">
+                    <span class="temperature" id="day_5_temp"></span>
+                    <span class="date_number" id="day_5_data"></span>
+                    <img id="day_5_img" src="" alt="cloud">
+                </div>
+            </div>
+            <ul class="features">
+                <li id="day_5_descr"></li>
+                <li id="day_5_morning"></li>
+                <li id="day_5_night"></li>
+                <li id="day_5_humidity"></li>
+            </ul>
+        </li>
+
+        <li class="weather_block">
+            <h3 id="day_6"></h3>
+            <div class="pictures">
+                <div class="date">
+                    <span class="temperature" id="day_6_temp"></span>
+                    <span class="date_number" id="day_6_data"></span>
+                    <img id="day_6_img" src="" alt="cloud">
+                </div>
+            </div>
+            <ul class="features">
+                <li id="day_6_descr"></li>
+                <li id="day_6_morning"></li>
+                <li id="day_6_night"></li>
+                <li id="day_6_humidity"></li>
+            </ul>
+        </li>
+
+        <li class="weather_block">
+            <h3 id="day_7"></h3>
+            <div class="pictures">
+                <div class="date">
+                    <span class="temperature" id="day_7_temp"></span>
+                    <span class="date_number" id="day_7_data"></span>
+                    <img id="day_7_img" src="" alt="cloud">
+                </div>
+            </div>
+            <ul class="features">
+                <li id="day_7_descr"></li>
+                <li id="day_7_morning"></li>
+                <li id="day_7_night"></li>
+                <li id="day_7_humidity"></li>
+            </ul>
+        </li>
     </ul>
-    <div>
-        <div>Hello world</div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+    <div class="btn ps_prev">
+        <img src="//demo.techglimpse.com/prev-next-buttons/left.png">
     </div>
-    <!-- build:js scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="bower_components/jquery/jquery.js"></script>
-    <script src="bower_components/tooltipster/js/jquery.tooltipster.min.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:js scripts/vendor.js -->
-    <script src="js/main.js"></script>
-    <!-- endbuild -->
+    <div class="btn ps_next">
+        <img src="//demo.techglimpse.com/prev-next-buttons/right.png">
+    </div>
+</div>
+<!-- build:js scripts/vendor.js -->
+<!-- bower:js -->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/jquery/jquery.js"></script>
+<script src="bower_components/tooltipster/js/jquery.tooltipster.min.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+<!-- build:js scripts/vendor.js -->
+<script src="js/dateFormat.js"></script>
+<script src="js/main.js"></script>
+<!-- endbuild -->
 </body>
 </html>
