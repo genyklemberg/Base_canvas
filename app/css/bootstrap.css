@@ -16,6 +16,10 @@ body {
   margin: 0;
 }
 
+section {
+  display: block;
+}
+
 img {
   border: 0;
 }

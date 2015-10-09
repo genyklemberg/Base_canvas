@@ -20,7 +20,7 @@ function getWeatherData(url){
 function populateData(weatherData,fromElemt){
     $("#city_name").text(weatherData.city.name);
     //populating temperature data for each day
-    for (var i = 1; i <= 7; i++) {
+    for (var i = 1; i <= 6; i++) {
         $("#day_"+i+"_temp").text(Math.round(weatherData.list[fromElemt+i-1].temp.day )+ '\xB0');
 
         //populating data
@@ -46,11 +46,11 @@ function populateData(weatherData,fromElemt){
 }
 
 function nextThreeDays(){
-    if(position < 9){
-        populateData(weatherObject,position += 7);
+    if(position < 8){
+        populateData(weatherObject,position += 6);
         $(".ps_prev").show();
     }
-    if(position === 10){
+    if(position === 9){
         $(".ps_next").hide();
     }
 
@@ -59,7 +59,7 @@ function nextThreeDays(){
 
 function previousThreeDays(){
     if(position > 0){
-        populateData(weatherObject,position -=7);
+        populateData(weatherObject,position -=6);
         $(".ps_next").show();
     }
     if(position === 0){
