@@ -1,15 +1,15 @@
 var weatherObject ;
-var position = 0;
+var position=0;
 
 (function(){
-    getWeatherData("http://api.openweathermap.org/data/2.5/forecast/daily?id=702550&units=metric&cnt=9&lang=ua");
+    getWeatherData("//api.openweathermap.org/data/2.5/forecast/daily?id=702550&APPID=cbb88e2e05e3fbd2117efcb076e1b3a4&units=metric&cnt=15");
 })();
+
 
 function getWeatherData(url){
     function resultFunction(data){
         weatherObject = data;
         populateData(data,position);
-        $(".ps_prev").hide();
     }
 
     $.ajax({
@@ -20,7 +20,7 @@ function getWeatherData(url){
 function populateData(weatherData,fromElemt){
     $("#city_name").text(weatherData.city.name);
     //populating temperature data for each day
-    for (var i = 1; i <= 6; i++) {
+    for (var i = 1; i <= 15; i++) {
         $("#day_"+i+"_temp").text(Math.round(weatherData.list[fromElemt+i-1].temp.day )+ '\xB0');
 
         //populating data
@@ -30,10 +30,10 @@ function populateData(weatherData,fromElemt){
         //description
         $("#day_"+i+"_descr").text(weatherData.list[fromElemt+i-1].weather[0].main);
 
-        //degree in morning
+        //degree in the morning
         $("#day_"+i+"_morning").text(Math.round(weatherData.list[fromElemt+i-1].temp.morn) + '\xB0' + 'in the morning');
 
-        //degree in night
+        //degree at night
         $("#day_"+i+"_night").text(Math.round(weatherData.list[fromElemt+i-1].temp.night) + '\xB0' + 'at night');
 
         //humidity
@@ -46,26 +46,16 @@ function populateData(weatherData,fromElemt){
 }
 
 function nextThreeDays(){
-    if(position < 8){
-        populateData(weatherObject,position += 6);
-        $(".ps_prev").show();
+    if(position <7){
+        populateData(weatherObject,position +=3);
     }
-    if(position === 9){
-        $(".ps_next").hide();
-    }
-
 
 }
 
 function previousThreeDays(){
     if(position > 0){
-        populateData(weatherObject,position -=6);
-        $(".ps_next").show();
+        populateData(weatherObject,position -=3);
     }
-    if(position === 0){
-        $(".ps_prev").hide();
-    }
-
 }
 
 $(document).ready(function(){
@@ -74,8 +64,7 @@ $(document).ready(function(){
     $('.ps_prev').click(previousThreeDays);
 
     $('#city_list').change(function(){
-        getWeatherData("http://api.openweathermap.org/data/2.5/forecast/daily?id=" + this.value + "&units=metric&cnt=9&lang=ua");
-        $(".ps_next").show();
+        getWeatherData("//api.openweathermap.org/data/2.5/forecast/daily?id=" + this.value + "&APPID=cbb88e2e05e3fbd2117efcb076e1b3a4&units=metric&cnt=15");
         position = 0;
     });
 });
