@@ -4,6 +4,8 @@ body {
   background-image: url(../img/water_wood.jpg);
   background-size: cover;
   background-attachment: fixed;
+  padding: 0;
+  margin: 0;
 }
 .weather_table {
   line-height: 100%;
@@ -13,6 +15,7 @@ body {
   bottom: 5%;
   left: 15%;
   right: 15%;
+  cursor: pointer;
 }
 .weather_block {
   width: auto;
@@ -98,21 +101,25 @@ body {
 /* Search box */
 
 #city{
-  position: absolute;
-  right: 50%;
+  position: fixed;
   width: auto;
+  top: 1%;
+  left: 40%;
 
 }
 
 p{
   font-family: "mySunFonts", Helvetica, Arial, sans-serif;
   font-size: 30px;
+  margin: 2px;
 }
 
 option, select{
   height: 25px;
   width: 100%;
   font-family: 'Georgia', serif;
+  border-color: dodgerblue;
+  background-color: #2aabd2;
   border-radius: 5%;
   cursor: pointer;
 }
@@ -166,6 +173,7 @@ button:hover{
   border-radius: 5%;
   right: 2%;
 }
+
 
 @media only screen and (min-width : 480px) and (max-width : 768px) {
   .weather_block {width: 50%;}

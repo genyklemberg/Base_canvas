@@ -16,24 +16,6 @@ body {
   margin: 0;
 }
 
-section {
-  display: block;
-}
-
-img {
-  border: 0;
-}
-
-select {
-  margin: 0;
-  font: inherit;
-  color: inherit;
-}
-
-select {
-  text-transform: none;
-}
-
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   padding: 0;
@@ -51,24 +33,6 @@ input::-moz-focus-inner {
     background: transparent !important;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
-  }
-
-  img {
-    page-break-inside: avoid;
-  }
-
-  img {
-    max-width: 100% !important;
-  }
-
-  p,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h3 {
-    page-break-after: avoid;
   }
 }
 
@@ -104,45 +68,6 @@ body {
   background-color: #fff;
 }
 
-select {
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-}
-
-img {
-  vertical-align: middle;
-}
-
-h3 {
-  font-family: inherit;
-  font-weight: 500;
-  line-height: 1.1;
-  color: inherit;
-}
-
-h3 {
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-
-h3 {
-  font-size: 24px;
-}
-
-p {
-  margin: 0 0 10px;
-}
-
-ul {
-  margin-top: 0;
-  margin-bottom: 10px;
-}
-
-ul ul {
-  margin-bottom: 0;
-}
-
 .form-control::-moz-placeholder {
   color: #999;
   opacity: 1;
@@ -150,48 +75,6 @@ ul ul {
 
 .form-control:-ms-input-placeholder {
   color: #999;
-}
-
-.btn {
-  display: inline-block;
-  padding: 6px 12px;
-  margin-bottom: 0;
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 1.42857143;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background-image: none;
-  border: 1px solid transparent;
-  border-radius: 4px;
-}
-
-.btn:focus,
-.btn:active:focus {
-  outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-}
-
-.btn:hover,
-.btn:focus {
-  color: #333;
-  text-decoration: none;
-}
-
-.btn:active {
-  background-image: none;
-  outline: 0;
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
 }
 
 @-ms-viewport {

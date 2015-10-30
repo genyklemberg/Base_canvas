@@ -2,6 +2,7 @@
 <html lang="en" ng-app="website">
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="img/3D-superlab.ico"/>
     <!-- build:css css/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/normalize-css/normalize.css" />
@@ -15,131 +16,132 @@
     <title>Weather website</title>
 </head>
 <body>
-<div id="city">
-    <p>Weather in <span id="city_name"> </span></p>
-    <select id="city_list">
-        <option value="702550">Lviv</option>
-        <option value="696050">Kyiv</option>
-        <option value="706483">Kharkiv</option>
-        <option value="707471">Ivano-Frankivsk</option>
-        <option value="691650">Ternopil</option>
-        <option value="689558">Vinnytsya</option>
-        <option value="702569">Lutsk</option>
-        <option value="710735">Chernihiv</option>
-        <option value="698740">Odessa</option>
-    </select>
-</div>
-<div id="weather">
-    <ul class="weather_table">
-        <li class="weather_block">
-            <h3 id="day_1"></h3>
-            <div class="pictures">
-                <div class="date">
-                    <span class="temperature" id="day_1_temp"></span>
-                    <span class="date_number" id="day_1_data"></span>
-                    <img id="day_1_img" src="" alt="sun">
+    <div id="city">
+        <p id="location"></p>
+        <p>Weather in <span id="city_name"> </span></p>
+        <select id="city_list">
+            <option value="702550">Lviv</option>
+            <option value="696050">Kyiv</option>
+            <option value="706483">Kharkiv</option>
+            <option value="707471">Ivano-Frankivsk</option>
+            <option value="691650">Ternopil</option>
+            <option value="689558">Vinnytsya</option>
+            <option value="702569">Lutsk</option>
+            <option value="710735">Chernihiv</option>
+            <option value="698740">Odessa</option>
+        </select>
+    </div>
+    <div id="weather">
+        <ul class="weather_table">
+            <li class="weather_block">
+                <h3 id="day_1"></h3>
+                <div class="pictures">
+                    <div class="date">
+                        <span class="temperature" id="day_1_temp"></span>
+                        <span class="date_number" id="day_1_data"></span>
+                        <img id="day_1_img" src="" alt="sun">
+                    </div>
                 </div>
-            </div>
-            <ul class="features">
-                <li id="day_1_descr"></li>
-                <li id="day_1_morning"></li>
-                <li id="day_1_night"></li>
-                <li id="day_1_humidity"></li>
-            </ul>
+                <ul class="features">
+                    <li id="day_1_descr"></li>
+                    <li id="day_1_morning"></li>
+                    <li id="day_1_night"></li>
+                    <li id="day_1_humidity"></li>
+                </ul>
 
-        </li>
+            </li>
 
-        <li class="weather_block">
-            <h3 id="day_2"></h3>
-            <div class="pictures">
-                <div class="date">
-                    <span class="temperature" id="day_2_temp"></span>
-                    <span class="date_number" id="day_2_data"></span>
-                    <img  id="day_2_img" src="" alt="sun">
+            <li class="weather_block">
+                <h3 id="day_2"></h3>
+                <div class="pictures">
+                    <div class="date">
+                        <span class="temperature" id="day_2_temp"></span>
+                        <span class="date_number" id="day_2_data"></span>
+                        <img  id="day_2_img" src="" alt="sun">
+                    </div>
                 </div>
-            </div>
-            <ul class="features">
-                <li id="day_2_descr"></li>
-                <li id="day_2_morning"></li>
-                <li id="day_2_night"></li>
-                <li id="day_2_humidity"></li>
-            </ul>
+                <ul class="features">
+                    <li id="day_2_descr"></li>
+                    <li id="day_2_morning"></li>
+                    <li id="day_2_night"></li>
+                    <li id="day_2_humidity"></li>
+                </ul>
 
-        </li>
+            </li>
 
-        <li class="weather_block">
-            <h3 id="day_3"></h3>
-            <div class="pictures">
-                <div class="date">
-                    <span class="temperature" id="day_3_temp"></span>
-                    <span class="date_number" id="day_3_data"></span>
-                    <img id="day_3_img" src="" alt="cloud">
+            <li class="weather_block">
+                <h3 id="day_3"></h3>
+                <div class="pictures">
+                    <div class="date">
+                        <span class="temperature" id="day_3_temp"></span>
+                        <span class="date_number" id="day_3_data"></span>
+                        <img id="day_3_img" src="" alt="cloud">
+                    </div>
                 </div>
-            </div>
-            <ul class="features">
-                <li id="day_3_descr"></li>
-                <li id="day_3_morning"></li>
-                <li id="day_3_night"></li>
-                <li id="day_3_humidity"></li>
-            </ul>
-        </li>
+                <ul class="features">
+                    <li id="day_3_descr"></li>
+                    <li id="day_3_morning"></li>
+                    <li id="day_3_night"></li>
+                    <li id="day_3_humidity"></li>
+                </ul>
+            </li>
 
-        <li class="weather_block">
-            <h3 id="day_4"></h3>
-            <div class="pictures">
-                <div class="date">
-                    <span class="temperature" id="day_4_temp"></span>
-                    <span class="date_number" id="day_4_data"></span>
-                    <img id="day_4_img" src="" alt="cloud">
+            <li class="weather_block">
+                <h3 id="day_4"></h3>
+                <div class="pictures">
+                    <div class="date">
+                        <span class="temperature" id="day_4_temp"></span>
+                        <span class="date_number" id="day_4_data"></span>
+                        <img id="day_4_img" src="" alt="cloud">
+                    </div>
                 </div>
-            </div>
-            <ul class="features">
-                <li id="day_4_descr"></li>
-                <li id="day_4_morning"></li>
-                <li id="day_4_night"></li>
-                <li id="day_4_humidity"></li>
-            </ul>
-        </li>
+                <ul class="features">
+                    <li id="day_4_descr"></li>
+                    <li id="day_4_morning"></li>
+                    <li id="day_4_night"></li>
+                    <li id="day_4_humidity"></li>
+                </ul>
+            </li>
 
-        <li class="weather_block">
-            <h3 id="day_5"></h3>
-            <div class="pictures">
-                <div class="date">
-                    <span class="temperature" id="day_5_temp"></span>
-                    <span class="date_number" id="day_5_data"></span>
-                    <img id="day_5_img" src="" alt="cloud">
+            <li class="weather_block">
+                <h3 id="day_5"></h3>
+                <div class="pictures">
+                    <div class="date">
+                        <span class="temperature" id="day_5_temp"></span>
+                        <span class="date_number" id="day_5_data"></span>
+                        <img id="day_5_img" src="" alt="cloud">
+                    </div>
                 </div>
-            </div>
-            <ul class="features">
-                <li id="day_5_descr"></li>
-                <li id="day_5_morning"></li>
-                <li id="day_5_night"></li>
-                <li id="day_5_humidity"></li>
-            </ul>
-        </li>
+                <ul class="features">
+                    <li id="day_5_descr"></li>
+                    <li id="day_5_morning"></li>
+                    <li id="day_5_night"></li>
+                    <li id="day_5_humidity"></li>
+                </ul>
+            </li>
 
-        <li class="weather_block">
-            <h3 id="day_6"></h3>
-            <div class="pictures">
-                <div class="date">
-                    <span class="temperature" id="day_6_temp"></span>
-                    <span class="date_number" id="day_6_data"></span>
-                    <img id="day_6_img" src="" alt="cloud">
+            <li class="weather_block">
+                <h3 id="day_6"></h3>
+                <div class="pictures">
+                    <div class="date">
+                        <span class="temperature" id="day_6_temp"></span>
+                        <span class="date_number" id="day_6_data"></span>
+                        <img id="day_6_img" src="" alt="cloud">
+                    </div>
                 </div>
-            </div>
-            <ul class="features">
-                <li id="day_6_descr"></li>
-                <li id="day_6_morning"></li>
-                <li id="day_6_night"></li>
-                <li id="day_6_humidity"></li>
-            </ul>
-        </li>
-
-</div>
-<button class="ps_prev">
-</button>
-<button class="ps_next">
-</button>
+                <ul class="features">
+                    <li id="day_6_descr"></li>
+                    <li id="day_6_morning"></li>
+                    <li id="day_6_night"></li>
+                    <li id="day_6_humidity"></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <button class="ps_prev">
+    </button>
+    <button class="ps_next">
+    </button>
 <!-- build:js scripts/vendor.js -->
 <!-- bower:js -->
 <script src="bower_components/angular/angular.js"></script>
@@ -150,6 +152,4 @@
 <!-- build:js scripts/vendor.js -->
 <script src="js/dateFormat.js"></script>
 <script src="js/main.js"></script>
-<!-- endbuild -->
-</body>
-</html>
+<!--

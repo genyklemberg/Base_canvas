@@ -1,6 +1,7 @@
 var weatherObject ;
 var position=0;
 
+
 (function(){
     getWeatherData("//api.openweathermap.org/data/2.5/forecast/daily?id=702550&APPID=cbb88e2e05e3fbd2117efcb076e1b3a4&units=metric&cnt=15");
 })();
@@ -15,6 +16,7 @@ function getWeatherData(url){
     $.ajax({
         url:url
     }).done(resultFunction)
+    $('#location').html(city + ', <b>' + country + '</b>'); // Adding a location to the page
 }
 
 function populateData(weatherData,fromElemt){
